@@ -14,8 +14,11 @@ pip install -r requirements.txt
  - pip install requests
 
 **Or on mac, directly in terminal:**
+
 python3 -m pip install Pillow
+
 python3 -m pip install openai
+
 python3 -m pip install requests
 
 **API KEY usage:**
