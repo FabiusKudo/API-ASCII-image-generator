@@ -2,7 +2,7 @@ from PIL import Image
 import openai 
 import os 
 import requests 
-from ip import BytesIO
+from io import BytesIO
 
 # Import libraries for openai API, os funcionality, http requests and image manipulation
 
@@ -60,7 +60,7 @@ def image_to_ascii(image_path, output_width):
   pixels = list(image.getdata())
   ascii_str = ""
   for pixel_value in pixels:
-    ascii_str += ascii_chars[pixel_value // 256]
+    ascii_str += ascii_chars[pixel_value * len(ascii_chars) // 256]
   ascii_str_len = len(ascii_str)
   ascii_img = ""
   for i in range(0, ascii_str_len, output_width):
